@@ -172,7 +172,12 @@ form {
 
 @media (max-width: 767px) {
     .header_sideNav{
-        width: 30vw;
+        width: 40vw;
+        
+    }
+    .sideNav_inner{
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
     }
     #movies .row{
         max-width: 90%;
