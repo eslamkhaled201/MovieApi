@@ -63,7 +63,7 @@ p {
 .movie_card {
     overflow: hidden;
     border-radius: 5px;
-    min-height: 40vh;
+    min-height: 20%;
     margin-bottom: 1.5rem;
     color: black;
 }
@@ -171,6 +171,13 @@ form {
 /* reponsive settings */
 
 @media (max-width: 767px) {
+    .header_sideNav{
+        width: 30vw;
+    }
+    #movies .row{
+        max-width: 90%;
+        margin-left: auto;
+    }
     .col-sm-6 {
         max-width: 48%;
         margin-bottom: 1rem;

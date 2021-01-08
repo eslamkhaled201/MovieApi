@@ -33,7 +33,7 @@ export class Movie {
     displayMovies(array) {
         let movies = "";
         array.forEach(element => {
-            movies += `    <div class="movie_card col-md-4 col-sm-6 position-relative">
+            movies += `    <div class="movie_card col-md-4 col-sm-12 position-relative">
             <img src="https://image.tmdb.org/t/p/w500/${element.poster_path}" alt="" srcset="">
             <div class="movie-info h-100 flex-column-center position-absolute">
                 <h4>${element.title}</h4>
