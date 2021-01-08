@@ -190,6 +190,19 @@ form {
         max-width: 90%;
         margin-left: auto;
     }
+
+    #contact .container{
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    #contact .container header{
+        width: 80%;
+    }
+    #contact .container #contactform{
+        width: 80%;
+    }
     .col-sm-6 {
         max-width: 48%;
         margin-bottom: 1rem;
