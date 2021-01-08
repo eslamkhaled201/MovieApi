@@ -172,12 +172,19 @@ form {
 
 @media (max-width: 767px) {
     .header_sideNav{
-        width: 50vw;
+        width: 60vw;
         
     }
     .sideNav_inner{
         padding-left: 0.5rem;
         padding-right: 0.5rem;
+    }
+    #searchInpCon{
+        flex-direction: column !important;
+        align-items: flex-end;
+    }
+    #searchInpCon input{
+        max-width: 90%!important;
     }
     #movies .row{
         max-width: 90%;
