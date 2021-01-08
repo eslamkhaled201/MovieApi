@@ -1,0 +1,142 @@
+.header_sideNav{
+    z-index: 1111;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    height: 100vh;
+    display: flex;
+}
+
+.sideNav_inner{
+    position: relative;
+    height: 100%;
+    width: 80%;
+    background-color: black;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.bottom-div{
+    padding: 0 1.5rem;
+    
+}
+.bottom-div i{
+    margin-left: 1rem;
+    cursor: pointer;
+      transition: color .2s;
+}
+.bottom-div i:hover{
+    color: rgba(180, 14, 19, 0.637);
+}
+.navList{
+    padding: 0 1rem;
+    margin-top: 1rem;
+    overflow: hidden;
+}
+.nav-item{
+    position: relative;
+    width: 100%;
+    margin: 1rem 1rem;
+    top: 100%;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes animateTop {
+    0%{top: 100%}
+    100%{top: 0}
+}
+.navLink{
+   
+    text-transform: capitalize;
+    color: #f9f6f6;
+    font-weight: 100;
+    font-size: 16px;
+   
+    transition: color .2s;
+}
+.navLink:hover{
+    color: var(--main-color);
+}
+.sideNav_outer{
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f6f6;
+    padding:  1rem 0.4rem;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.header_logo{
+    width: 70%;
+    height: 60px;
+}
+#openBtn{
+    align-items: center;
+    height: 50px;
+}
+.openBtnIcon::before{
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 3.5px;
+    background: inherit;
+    border-radius: 10px;
+    top: -10px;
+    opacity: 1;
+}
+.openBtnIcon{
+    border-radius: 5px;
+    position: relative;
+    width: 25px;
+    height: 3.5px;
+    background:black;
+}
+.openBtnIcon::after{
+    position: absolute;
+    border-radius: 5px;
+    content: " ";
+    width: 25px;
+    height: 3.5px;
+    background: inherit;
+    top: 10px;
+}
+
+/* animation for change open btn to close shape to open btn when it clicked **/
+.closeShape::before{
+    animation-name: hidden;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+.closeShape{
+    animation-name: rotateMain;
+    animation-duration: 0.3s;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+}
+.closeShape::after{
+    animation-name: rotateAfter;
+    animation-duration: 0.3s;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+}
+@keyframes hidden{
+    0%{  opacity: 1;}
+    100%{top: 0;opacity: 0;}
+}
+@keyframes rotateAfter{
+    0%{transform: rotate(0);}
+    50%{top:0;}
+    100%{top:0;transform: rotate(-90deg) ;}
+}
+@keyframes rotateMain {
+    0%{transform: rotate(0); }
+    100%{transform: rotate(-45deg);}
+}
+
+.outer_bottom a{
+    display: flex;
+    color: #212529;
+    margin-bottom: 1rem;
+}

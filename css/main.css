@@ -1,0 +1,212 @@
+@import "header.css";
+@import "asideList.css";
+:root {
+    --main-color: rgba(214, 46, 51, 0.4);
+    --red-colar: #e4656a !important;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #000000f2;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+}
+
+a,
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+img {
+    width: 100%;
+    height: 100%;
+}
+ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    margin-bottom: 0;
+}
+p {
+    margin: 0;
+    color: #444;
+}
+.row {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+}
+.col-md-6,
+.col-md-4,
+.col-md-3 {
+    padding-left: 0;
+    padding-right: 0;
+}
+.flex-column-center {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center;
+}
+.bg-img-cover {
+    background-position: center center;
+    background-size: cover;
+}
+/* movie section  */
+.movie_card {
+    overflow: hidden;
+    border-radius: 5px;
+    min-height: 40vh;
+    margin-bottom: 1.5rem;
+    color: black;
+}
+.movie_card:hover .movie-info{
+    top: 0;
+}
+.movie-info {
+    text-transform: capitalize;
+    top: 100%;
+    text-align: center;
+    font-size: 1.1;
+    padding: 0.8rem;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(190, 190, 190, 0.692);
+    transition: top 0.5s;
+  
+}
+.overview{
+    color: black;
+}
+#movies input {
+    display: inline-block;
+    max-width: 45%;
+}
+/* end movie section */
+
+/* contact form styling */
+#contact {
+    min-height: 60vh;
+    display: flex;
+}
+.section_heading {
+    text-transform: capitalize;
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+.grid-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
+    column-gap: 1.5rem;
+    row-gap: 1.5rem;
+}
+.contact_info header {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+
+.success-feedBack{
+    height: 20vh;
+    text-align: center;
+    display: flex;
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+form {
+    width: 100%;
+}
+
+.contact_form input::placeholder,
+#movies input::placeholder {
+    text-align: center;
+    text-transform: capitalize;
+    color: white;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+.contact_form input:focus,
+#movies input:focus {
+    background-color: transparent;
+}
+.contact_form input,
+#movies input {
+    border: none;
+    border-bottom: 1px solid #dee2e6 !important;
+    width: 100%;
+    border-radius: 0;
+    background-color: transparent;
+    padding: 0.4rem 0.8rem;
+}
+.form-group{
+    margin-bottom: 2rem;
+}
+.form-text{
+    margin-top: 1rem;
+    padding: 0.5rem 1rem ;
+    border-radius: 5px;
+    background-color: var(--red-colar);
+    color: white;
+    display: none;
+}
+.contact_form button {
+    text-transform: capitalize;
+    margin: auto;
+    font-size: 1rem;
+    padding: 8px 21px;
+    margin-top: 1rem;
+    letter-spacing: 1px;
+}
+
+/* End contact form  */
+/* reponsive settings */
+
+@media (max-width: 767px) {
+    .col-sm-6 {
+        max-width: 48%;
+        margin-bottom: 1rem;
+    }
+    .col-sm-4 {
+        max-width: 32%;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .col-sm-6 {
+        max-width: 48%;
+    }
+    .col-md-6 {
+        max-width: 48%;
+    }
+    .col-md-4 {
+        max-width: 32%;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-3 {
+        max-width: 23%;
+    }
+    .col-md-4 {
+        max-width: 31%;
+    }
+    .col-md-6 {
+        max-width: 48%;
+    }
+    .container {
+        max-width: 78%;
+    }
+    .col-lg-4 {
+        max-width: 31%;
+    }
+}

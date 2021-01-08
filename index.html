@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Exam</title>
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+
+
+    <aside class="header_sideNav">
+        <div class="sideNav_inner">
+            <ul class="navList flex-column-center">
+                <li class="nav-item"> <a href="#now_playing" movieCategory="now_playing" class="navLink">now playing</a>
+                </li>
+                <li class="nav-item"><a href="#popular" movieCategory="popular" class="navLink">popular</a></li>
+                <li class="nav-item"><a href="#top_rated" movieCategory="top_rated" class="navLink">top related</a></li>
+                <li class="nav-item"><a href="#trending" movieCategory="trending" class="navLink">trending</a></li>
+                <li class="nav-item"><a href="#upcoming" movieCategory="upcoming" class="navLink">upcoming</a></li>
+                <li class="nav-item"><a href="#contact" class="navLink">contact</a></li>
+            </ul>
+            <div class="bottom-div text-white">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fas fa-globe"></i>
+                <p class="text-white mt-3">Copyright Â© 2019 All Rights Reserved.
+                </p>
+            </div>
+        </div>
+        <div class="sideNav_outer d-flex">
+            <div class="header_logo">
+                <img src="./img/logo.png" alt="" srcset="">
+            </div>
+            <div id="openBtn" class="d-flex">
+                <a class="mx-auto openBtnIcon"></a>
+            </div>
+            <div class="outer_bottom">
+                <a href=""><i class="fas fa-globe"></i></a>
+                <a href=""><i class="fas fa-share-alt"></i></a>
+            </div>
+        </div>
+    </aside>
+
+
+
+    <main>
+        <section id="movies" class="container mb-5 mt-5 ">
+            <div class="d-flex justify-content-between">
+                <input placeholder="Search movie by word" type="text" id="searchByWordIn"
+                    class="form-control  my-3 text-center">
+                <input placeholder="Search by letter" type="text" id="searchByLetterIn"
+                    class="form-control   my-3 text-center ">
+            </div>
+
+            <div id="moviesRow" class="mt-3 w-100 row justify-content-between">
+
+            </div>
+        </section>
+        <section id="contact" class="py-5">
+            <div class="container ">
+                <header class=" mb-3">
+                    <h2 class="section_heading text-white">Contact Us...</h2>
+                </header>
+                <div class="success-feedBack d-none">
+                    <i class="far fa-check-circle text-success mr-3"></i>
+                    <p class="text-white">Your Data Is Sent</p>
+                </div>
+                <form id="contactform" class="grid-row mb-4">
+                    <div class="contact_form">
+                        <div class="form-group">
+                            <input class="form-control  userInput border-bottom " type="text"
+                                placeholder="enter your name" id="userName" />
+                            <small class="form-text text-white alert-danger h-auto mt-1 ">Your Name is not valid.
+                            </small>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control  userInput border-bottom " type="number"
+                                placeholder="enter your phone" id="userPhone" />
+                            <small class="form-text text-white alert-danger h-auto mt-1 ">Enter Egyption number
+                            </small>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control  userInput border-bottom " type="password"
+                                placeholder="enter your password" id="userPass" />
+                            <small class="form-text text-white alert-danger h-auto mt-1 ">entre valid password *Minimum
+                                eight
+                                characters and one number:*
+                            </small>
+                        </div>
+
+                    </div>
+                    <div class="contact_form">
+                        <div class="form-group">
+                            <input class="form-control  userInput border-bottom " type="email"
+                                placeholder="enter your email" id="userEmail" />
+                            <small class="form-text text-white alert-danger h-auto mt-1 ">entre valid email
+                            </small>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control  userInput border-bottom " type="number" placeholder="your age"
+                                id="userAge" />
+                            <small class="form-text text-white alert-danger h-auto mt-1 ">entre valid Age
+                            </small>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control  border-bottom " type="password"
+                                placeholder="reEnter password" id="userRePass" />
+                            <small class="form-text text-white alert-danger h-auto mt-1 ">entre valid Repassword
+                            </small>
+                        </div>
+                    </div>
+                    <button id="submitContact" class="btn btn-outline-danger w-25">
+                        submit
+                    </button>
+                </form>
+                
+            </div>
+        </section>
+    </main>
+
+    <script src="https://kit.fontawesome.com/7e34c6da7e.js" crossorigin="anonymous"></script>
+    <script src="./js/jquery-3.4.1.js"></script>
+    <script src="./js/main.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+#home{
+    display: grid;
+    grid-template-columns: minmax(1fr);
+    grid-template-rows: minmax(1fr);
+    min-height: 80vh;
+    background-image: url("../img/events-heavenly-header.jpg");
+}
+#headerCaption{
+    position: relative;
+    left: 0;
+}
+header h1{
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+.slogan{
+    font-size: 1.1rem;
+    color: white;
+}
