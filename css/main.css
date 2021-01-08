@@ -172,6 +172,9 @@ form {
 
 @media (max-width: 767px) {
     .header_sideNav{
+        left: -50%;
+    }
+    .header_sideNav{
         width: 60vw;
         
     }
@@ -214,6 +217,9 @@ form {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+    .header_sideNav{
+        left: -34%;
+    }
     .col-sm-6 {
         max-width: 48%;
     }

@@ -20,7 +20,6 @@ $(openNavBtn).click(() => {
                 })
             });
         });
-
     } else {
         $(MenuNav).animate({ left: `${-navListWidht}px` }, 500, () => {
             navItemsArray.forEach((element) => {
