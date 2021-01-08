@@ -15,7 +15,7 @@ export class Movie {
         }
     }
 
-    
+
     async getMoviesByCategory(category) {
         let ApiUrl;
         if (category == "trending") {
@@ -51,17 +51,17 @@ export class Movie {
         // 1- validate search input
         let validSearchPattern = /([a-zA-Z0-9])$/;
         if (validSearchPattern.test(searchKey)) {
+            let searchedMovies = [];
             let searchLowerCasing = searchKey.toLowerCase();// convert search key for small letter 
             // choose search critria according to search input used 
             if (searchOption == "byWord") {
                 // find first movie in array has title that equals search value   
-                let searchedMovie = this.moviesArray.find(movie => movie.title.toLowerCase()==searchLowerCasing);
-                let movieInarray = [searchedMovie]; 
+                let searchedMovie = this.moviesArray.find(movie => movie.title.toLowerCase() == searchLowerCasing);
+                let movieInarray = [searchedMovie];
                 this.displayMovies(movieInarray);
             } else {
                 // check if any letter of input value eqauls any letter of movie title 
-                let searchedMovies = this.moviesArray.filter(movie => movie.title.toLowerCase().includes(searchLowerCasing) == true)
-                searchedMovies.push(element);
+                searchedMovies = this.moviesArray.filter(movie => movie.title.toLowerCase().includes(searchLowerCasing) == true)
                 this.displayMovies(searchedMovies);
             }
         } else {
