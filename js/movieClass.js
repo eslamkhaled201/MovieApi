@@ -5,7 +5,7 @@ export class Movie {
 
 
     /* get request function to fech data from any api url*/
-    async getRequest(url = '') {
+    async #getRequest(url = '') {
         try {
             let response = await fetch(url);
             let responseData = await response.json();
@@ -23,7 +23,7 @@ export class Movie {
         } else {
             ApiUrl = `https://api.themoviedb.org/3/movie/${category}?api_key=eba8b9a7199efdcb0ca1f96879b83c44`;
         }
-        let movies = await this.getRequest(ApiUrl);
+        let movies = await this.#getRequest(ApiUrl);
         this.moviesArray = movies;
         this.displayMovies(this.moviesArray)
     }
