@@ -2,6 +2,30 @@ import { openNavBtn, navItemsArray, MenuNav } from "./variables.js";
 import { Movie } from "./movieClass.js";
 import { Validation } from "./validationClass.js";
 
+
+let movie = new Movie();
+movie.getMoviesByCategory("now_playing")
+
+$("a[movieCategory]").click(function () {
+    let category = $(this).attr("movieCategory");
+    movie.getMoviesByCategory(category);
+})
+
+$("#searchByWordIn").keyup(function (e) {
+    movie.searchMovies(e.target.value, "byWord");
+});
+
+$("#searchByLetterIn").keyup(function (e) {
+    movie.searchMovies(e.target.value);
+});
+
+/* function smooth scroll to conatct section */ 
+$("a[href ='#contact']").click(function () {
+    let targetId =$(this).attr("href");
+    let targetOffsetTop = $(`${targetId}`).offset().top;
+    $("html , body").animate({scrollTop : targetOffsetTop}, 1000);  
+});
+
 /* open  navigation Menu functionality */
 let navListWidht = $(".sideNav_inner").outerWidth();
 $(MenuNav).css("left", `${-navListWidht}px`);
@@ -31,29 +55,6 @@ $(openNavBtn).click(() => {
             })
         });
     }
-});
-
-/* function smooth scroll to conatct section */ 
-$("a[href ='#contact']").click(function () {
-    let targetId =$(this).attr("href");
-    let targetOffsetTop = $(`${targetId}`).offset().top;
-    $("html , body").animate({scrollTop : targetOffsetTop}, 1000);  
-})
-
-let movie = new Movie();
-movie.getMoviesByCategory("now_playing")
-
-$("a[movieCategory]").click(function () {
-    let category = $(this).attr("movieCategory");
-    movie.getMoviesByCategory(category);
-})
-
-$("#searchByWordIn").keyup(function (e) {
-    movie.searchMovies(e.target.value, "byWord");
-});
-
-$("#searchByLetterIn").keyup(function (e) {
-    movie.searchMovies(e.target.value);
 });
 
 /** validating contact inputs  */
