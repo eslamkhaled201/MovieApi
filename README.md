@@ -4,4 +4,4 @@
 Technical Skills Used : 
 -Es6 opp Class-based.  -Fetching JSON Data from API.  -ES6 Modules for the structure project code.
 work Time:  2 days.
-View Link:  https://eslamkhaled201.github.io/MovieApi/
+View Link:  https://movieapi2.netlify.app/
