@@ -3,7 +3,6 @@ import { Movie } from "./movieClass.js";
 import { Validation } from "./validationClass.js";
 
 
-let newVAr = =5;
 let movie = new Movie();
 movie.getMoviesByCategory("now_playing")
 
